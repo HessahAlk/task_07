@@ -3,6 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>Update</title>
+         <form action="{% url 'restaurant-update' restaurant_obj.id %}" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Update">
+        </form>
     </head>
     <body>
 
